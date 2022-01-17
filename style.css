@@ -19,7 +19,7 @@ div.menu-grid {
     border-left: 1px solid #c2c1c1;
 }
 
-div.menu-grid>div {
+div.menu-grid > div {
     padding: 10px 35px;
     border-top: 1px solid #c2c1c1;
     border-right: 1px solid #c2c1c1;
@@ -30,13 +30,13 @@ span.label {
     color: #8e8e8e;
 }
 
-div.menu-grid>div>i {
+div.menu-grid > div > i {
     color: #2e2e2e;
     font-size: 1.2em;
     margin-bottom: 5px;
 }
 
-div.menu-grid>div>i.active {
+div.menu-grid > div > i.active {
     color: #d51600;
 }
 
@@ -75,16 +75,29 @@ div.ok-outer {
 
 i.right {
     transform: translate(70px);
+    padding: 20px;
 }
 
 i.bottom {
     transform: rotate(90deg) translate(70px);
+    padding: 20px;
 }
 
 i.left {
     transform: rotate(180deg) translate(70px);
+
+    padding: 20px;
 }
 
 i.top {
     transform: rotate(270deg) translate(70px);
+    padding: 20px;
+}
+
+.rcb {
+    cursor: pointer;
+}
+
+.rc-col-bt .rcb {
+    padding: 20px;
 }
