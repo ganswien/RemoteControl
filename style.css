@@ -3,26 +3,55 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #2e2e2e;
 }
 
 .container {
     background: #e5e5e5;
     border-radius: 30px;
-    height: 650px;
+    /* height: 650px; */
     width: 350px;
+    border: 5px solid #000000;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 div.menu-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
     border-bottom: 1px solid #c2c1c1;
     border-left: 1px solid #c2c1c1;
 }
 
-div.menu-grid > div {
-    padding: 10px 35px;
+div.menu-grid.col4 {
+    grid-template-columns: auto auto auto auto;
+}
+
+div.menu-grid.col5 {
+    grid-template-columns: auto auto auto auto auto;
+}
+
+div.menu-grid > button {
+    padding: 10px 19px;
     border-top: 1px solid #c2c1c1;
     border-right: 1px solid #c2c1c1;
+    font-size: 12px;
+}
+
+div.menu-grid.col4 > button {
+    padding: 10px 28px;
 }
 
 span.label {
@@ -30,21 +59,23 @@ span.label {
     color: #8e8e8e;
 }
 
-div.menu-grid > div > i {
+div.menu-grid > button > i {
     color: #2e2e2e;
     font-size: 1.2em;
     margin-bottom: 5px;
 }
 
-div.menu-grid > div > i.active {
+div.menu-grid > button > i.active {
     color: #d51600;
 }
 
+button.rounded-bg,
 div.rounded-bg {
     background: #d9d9d9;
     border-radius: 50px;
 }
 
+button.grey-bg,
 div.grey-bg {
     background: #d9d9d9;
     border-radius: 50%;
@@ -55,17 +86,19 @@ i.home-icon {
     color: #a1a1a1;
 }
 
-i.control-icon {
+button {
     font-size: 24px;
     color: #2e2e2e;
+    background-color: transparent;
 }
 
-div.circle {
+div.circle,
+button.circle {
     border: 1px solid #c2c1c1;
     border-radius: 50%;
 }
 
-div.ok-inner {
+button.ok-inner {
     padding: 30px;
 }
 
@@ -73,31 +106,39 @@ div.ok-outer {
     padding: 100px;
 }
 
-i.right {
+button.right {
     transform: translate(70px);
     padding: 20px;
 }
 
-i.bottom {
+button.bottom {
     transform: rotate(90deg) translate(70px);
     padding: 20px;
 }
 
-i.left {
+button.left {
     transform: rotate(180deg) translate(70px);
-
     padding: 20px;
 }
 
-i.top {
+button.top {
     transform: rotate(270deg) translate(70px);
     padding: 20px;
 }
 
-.rcb {
-    cursor: pointer;
-}
-
 .rc-col-bt .rcb {
     padding: 20px;
+}
+
+.fa-circle.red {
+    color: red;    
+}
+.fa-circle.green {
+    color: green;
+}
+.fa-circle.blue {
+    color: blue;
+}
+.fa-circle.yellow {
+    color: #f3ee00;
 }
